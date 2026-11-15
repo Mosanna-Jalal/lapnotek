@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "node --env-file=.env --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/seed.mjs",
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@maptiler/sdk": "^4.2.1",
+    "mongodb": "^7.9.0",
+    "motion": "^14.14.0",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
